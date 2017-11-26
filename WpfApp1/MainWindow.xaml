@@ -1,0 +1,57 @@
+﻿<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="320.952" Width="543.083" Background="#FFA89A9A"
+       
+        >
+
+    <Grid Margin="10,18,9,19" RenderTransformOrigin="0.5,0.5" Width="500" Height="250">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0.213"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+
+        <Button Content="Choose File..." HorizontalAlignment="Left" VerticalAlignment="Top" Width="97"
+                Name="FileFinder" Click="FileFind" Height="26" Margin="10,10,0,0" />
+        <TextBox            
+            x:Name="FileContent" TextWrapping="NoWrap"
+                Background="{DynamicResource {x:Static SystemColors.InactiveCaptionBrushKey}}" Margin="10,57,243,15"  
+            />
+
+        <TextBox 
+            Height="38" Margin="310,57,10,0" TextWrapping="NoWrap" Name="Word" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"
+     
+        />
+        <TextBox TextWrapping="NoWrap" x:Name="Indexes" Margin="310,100,10,113" 
+            />
+        <Label Content="Find:" HorizontalAlignment="Left" Margin="262,69,0,0" VerticalAlignment="Top" Width="40" Height="26"/>
+        <Label Content="Result:" HorizontalAlignment="Left" Height="25" Margin="266,106,0,0" VerticalAlignment="Top" Width="42" RenderTransformOrigin="0.804,0.486">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.089"/>
+                    <TranslateTransform Y="0.019"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="File content:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Height="24" Width="72"/>
+        <Button Content="Format text"  Name="Format" FontWeight="Medium" FontSize="16"  Margin="310,181,48,43" Click="Format_Click"/>
+        <Button Content="Find Text" Name="FindText" FontWeight="Medium" FontSize="16" Margin="310,212,48,10"  Click="FindText_Click"/>
+    </Grid>
+</Window>
+    
+    
+    
+    
+    
+    
+    
